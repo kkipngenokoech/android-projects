@@ -28,4 +28,30 @@ public class MainActivity extends AppCompatActivity {
 //        results.setText("The sum is: "+answer);
         results.setText(Integer.toString(answer));
     }
+
+    public  void area(View v){
+        EditText t1 = (EditText) findViewById(R.id.editTextNumberDecimal);
+        EditText t2 = (EditText) findViewById(R.id.editTextNumberDecimal2);
+
+        int n1 = Integer.parseInt(t1.getText().toString());
+        int n2 = Integer.parseInt(t2.getText().toString());
+
+        int area = n1 * n2;
+
+        TextView results = (TextView) findViewById(R.id.editTextNumberDecimal5);
+        results.setText(Integer.toString(area));
+    }
+
+    public void perimeter(View v){
+        EditText t1 = (EditText) findViewById(R.id.editTextNumberDecimal);
+        EditText t2 = (EditText) findViewById(R.id.editTextNumberDecimal2);
+
+        int n1 = Integer.parseInt(t1.getText().toString());
+        int n2 = Integer.parseInt(t2.getText().toString());
+
+        int perimeter = 2 * (n1 + n2);
+
+        TextView results = (TextView) findViewById(R.id.editTextNumberDecimal5);
+        results.setText(Integer.toString(perimeter));
+    }
 }
