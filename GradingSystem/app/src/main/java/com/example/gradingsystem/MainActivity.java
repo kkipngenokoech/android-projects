@@ -2,6 +2,7 @@ package com.example.gradingsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -27,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
         int average = total / 3;
         char grade = grade(average);
 
-
+        Intent  intent = new Intent(this, ResultsActivity.class);
+        intent.putExtra("average", average);
+        intent.putExtra("grade", grade);
+        startActivity(intent);
     }
 
     public char grade(int average){
