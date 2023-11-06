@@ -13,7 +13,7 @@ public class ResultsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_results);
 
         int average = getIntent().getIntExtra("average", 0);
-        char grade = getIntent().getCharExtra("grade", 'Y');
+        String grade = getIntent().getStringExtra("grade");
 
         TextView gradeView = (TextView) findViewById(R.id.textView2);
         gradeView.setText("Average: "+average+" Grade: "+grade);
