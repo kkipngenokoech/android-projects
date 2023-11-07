@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 simpleTextView.setText("multiverse generations");
                 simpleTextView.setTextColor(Color.RED);
-                Toast.makeText(getApplicationContext(),"hey multiverse", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"hey multiverse", Toast.LENGTH_LONG).show();
             }
         });
 
