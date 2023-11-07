@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="clip_horizontal|fill_vertical"
     tools:context=".ResultsActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="bottom|fill_horizontal|center_vertical"
         android:text="Your Grade: "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,11 +22,23 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="198dp"
+        android:layout_height="137dp"
         android:layout_marginStart="166dp"
         android:layout_marginTop="100dp"
+        android:gravity="center|clip_vertical|center_vertical|fill_vertical|end"
         android:text="TextView"
+        android:textColor="#FF00"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/txt_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Hello multiverse"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="130dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

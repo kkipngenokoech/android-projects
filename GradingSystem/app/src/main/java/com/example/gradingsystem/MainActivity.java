@@ -3,9 +3,15 @@ package com.example.gradingsystem;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,6 +19,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final TextView simpleTextView = (TextView) findViewById(R.id.textView5);
+
+        Button changeText = (Button) findViewById(R.id.button);
+        changeText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                simpleTextView.setText("multiverse generations");
+                simpleTextView.setTextColor(Color.RED);
+                Toast.makeText(getApplicationContext(),"hey multiverse", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 
     public void calculateGrade(View view){
@@ -38,5 +57,11 @@ public class MainActivity extends AppCompatActivity {
         String grade;
         grade = average > 50 ? "Pass" : "fail";
         return grade;
+    }
+
+    public void setAttribute(View view){
+        TextView textView = (TextView) findViewById(R.id.textView5);
+        textView.setText("I have been assigned to this textview");
+        textView.setTextColor(Color.red(4));
     }
 }

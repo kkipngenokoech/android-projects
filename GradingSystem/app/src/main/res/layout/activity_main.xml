@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="91dp"
         android:layout_marginTop="192dp"
+        android:gravity="bottom|clip_vertical|right"
         android:text="multiverse units"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
